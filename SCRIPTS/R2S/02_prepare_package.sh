@@ -418,6 +418,9 @@ CONFIG_CRYPTO_SIMD=y
 # CONFIG_CRYPTO_SM4_ARM64_CE is not set
 ' >> ./target/linux/rockchip/armv8/config-5.4
 
+#1. Modify default IP
+sed -i 's/192.168.1.1/192.168.50.18/g' openwrt/package/base-files/files/bin/config_generate
+
 ##最后的收尾工作
 #Lets Fuck
 mkdir package/base-files/files/usr/bin
